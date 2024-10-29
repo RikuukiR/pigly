@@ -42,9 +42,9 @@ laravel環境構築
   6.マイグレーションの実行
 
     php artisan migrate
-  7.シーディングの実行
+  7.ファクトリの実行
 
-    php artisan db:seedphp artisan storage:link
+    <!-- php artisan db:seedphp artisan storage:link -->
   8.シンボリックリンクの作成
 
     php artisan storage:link
