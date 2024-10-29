@@ -3,6 +3,7 @@
 ## 環境構築
 
 Dockerビルド
+
   1.`git clone git@github.com:差し替えます
   2.DockerDesktopアプリを立ち上げる
   3.docker-compose up -d --build
@@ -44,5 +45,10 @@ laravel環境構築
 
 ##　　テーブル設計
 
+<img width="641" alt="スクリーンショット 2024-10-29 18 35 57" src="https://github.com/user-attachments/assets/3c2a2f80-be63-4aa5-863c-0106890fb0a1">
+<img width="776" alt="スクリーンショット 2024-10-29 18 36 07" src="https://github.com/user-attachments/assets/39e26a43-dce5-485b-9abc-9b17c42ecfc1">
+
+
 ## ER図
+
 ## URL
