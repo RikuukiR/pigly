@@ -17,7 +17,7 @@
         <div class="form-container">
             <div class="ttl">PiGLy</div>
             <div class="sub-ttl">新規会員登録</div>
-            <form action="{{ route('registration.store') }}" method="POST">
+            <form class="form" action="{{ route('registration.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="name">お名前</label>
@@ -51,8 +51,10 @@
                     </div>
                 @endif
 
-                <button type="submit" class="btn-next">次に進む</button>
-                <a href="/login">ログインはこちら</a>
+                <div class="form-button">
+                    <button type="submit" class="form-button__create">アカウント作成</button>
+                    <a class="form-button__login" href="/login">ログインはこちら</a>
+                </div>
             </form>
         </div>
     </main>

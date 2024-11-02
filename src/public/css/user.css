@@ -39,7 +39,71 @@ body {
     font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'MS Mincho', serif;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
 
+.form-group {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin: 15px 10px;
+}
 
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-/* linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%); */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.form-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button__create {
+    background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%);
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 50px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin: 20px auto 30px auto;
+}
+
+.form-button__login {
+    color: #2C99FF;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'MS Mincho', serif;
+    border-bottom: 1px;
+}
