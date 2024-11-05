@@ -1,0 +1,125 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 580px;
+    height: 530px;
+}
+
+.ttl {
+    color: #EC87EF;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'lora', serif;
+}
+
+.sub-ttl {
+    color: #333333;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'MS Mincho', serif;
+}
+
+.step {
+    color: #333333;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.form-group {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin: 15px 10px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+i.input-with-unit {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-unit input {
+    width: 94%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+.input-with-unit .unit {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    color: #333333;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.form-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button__create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%);
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin: 20px auto;
+    text-decoration: none;
+}

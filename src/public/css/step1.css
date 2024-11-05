@@ -38,6 +38,14 @@ body {
     font-weight: 300;
     font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'MS Mincho', serif;
 }
+.step {
+    color: #333333;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    margin-top: 20px;
+}
 
 .form {
     display: flex;
@@ -86,18 +94,22 @@ input[type="password"] {
 }
 
 .form-button__create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%);
     width: 250px;
     height: 50px;
     border-radius: 12px;
     cursor: pointer;
     border: none;
-    padding: 10px 50px;
+    padding: 10px 80px;
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 600;
     font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
     margin: 20px auto 30px auto;
+    text-decoration: none;
 }
 
 .form-button__login {

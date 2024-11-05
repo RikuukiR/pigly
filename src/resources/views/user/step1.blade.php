@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/user.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/step1.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
-    <title>create</title>
+    <title>会員登録画面</title>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
         <div class="form-container">
             <div class="ttl">PiGLy</div>
             <div class="sub-ttl">新規会員登録</div>
+            <div class="step">STEP1 アカウント情報の登録</div>
             <form class="form" action="{{ route('registration.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
@@ -50,9 +51,12 @@
                         </ul>
                     </div>
                 @endif
-
+                </form>
                 <div class="form-button">
-                    <button type="submit" class="form-button__create">アカウント作成</button>
+                    <form action="/register/step2" method="POST" style="display: inline;">
+                    @csrf
+                        <button type="submit" class="form-button__create">次に進む</button>
+                    </form>
                     <a class="form-button__login" href="/login">ログインはこちら</a>
                 </div>
             </form>
