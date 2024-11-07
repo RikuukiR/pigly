@@ -17,6 +17,15 @@ class Weight_logController extends Controller
         return view('weight_logs.create');
     }
 
+    public function store(Request $request)
+{
+    // 保存処理など
+    // ...
+
+    // home.blade.php にリダイレクト
+    return view('home');
+}
+
     public function search()
     {
         return view('weight_logs.search');

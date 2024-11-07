@@ -53,7 +53,7 @@
                 @endif
                 </form>
                 <div class="form-button">
-                    <form action="/register/step2" method="POST" style="display: inline;">
+                    <form action="/register/step2" method="POST">
                     @csrf
                         <button type="submit" class="form-button__create">次に進む</button>
                     </form>

@@ -52,7 +52,7 @@
                 @endif
                 </form>
                 <div class="form-button">
-                    <form action="/weight_logs" method="POST" style="display: inline;">
+                    <form action="{{ route('weight_logs.store') }}" method="POST">
                     @csrf
                         <button type="submit" class="form-button__create">アカウントの作成</button>
                     </form>
