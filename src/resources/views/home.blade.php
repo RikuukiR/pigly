@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>体重管理画面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
+    <title>体重管理画面</title>
 </head>
 
 <body>
@@ -16,79 +21,35 @@
             </a>
         </div>
         <div class="header__btn">
-            <button class="header__btn-set" type="submit">目標体重設定</button>
-            <button class="header__btn-logout" type="submit">ログアウト</button>
+          <div class="header__btn-set">
+            <button class="set-btn" type="submit">目標体重設定</button>
+          </div>
+          <div class="header__btn-logout">
+            <button class="logout-btn" type="submit">
+              <span class="logout-icon"></span>ログアウト
+            </button>
+          </div>
         </div>
     </header>
 
     <main>
+      <div class="container">
+        <div class="middle-header">
+          <div class="target-weight">目標体重　　kg</div>
+          <div class="target-difference">目標まで　　kg</div>
+          <div class="new-weight">最新体重　　kg</div>
+        </div>
 
-    <button class="main__btn-add" type="submit">データを追加</button>
+        <div class="container__log">
+          <button class="main__btn-add" type="submit">データを追加</button>
 
-    <button class="main__btn-update" type="submit">✏️</button>
-
-    <!-- <div class="contact-form__content">
-      <div class="contact-form__heading">
-        <h2>お問い合わせ</h2>
+          <button class="main__btn-update" type="submit">✏️</button>
+        </div>
       </div>
-      <form class="form">
-        <div class="form__group">
-          <div class="form__group-title">
-            <span class="form__label--item">お名前</span>
-            <span class="form__label--required">必須</span>
-          </div>
-          <div class="form__group-content">
-            <div class="form__input--text">
-              <input type="text" name="name" placeholder="テスト太郎" />
-            </div>
-            <div class="form__error">
-              バリデーション機能を実装したら記述します。
-            </div>
-          </div>
-        </div>
-        <div class="form__group">
-          <div class="form__group-title">
-            <span class="form__label--item">メールアドレス</span>
-            <span class="form__label--required">必須</span>
-          </div>
-          <div class="form__group-content">
-            <div class="form__input--text">
-              <input type="email" name="email" placeholder="test@example.com" />
-            </div>
-            <div class="form__error">
-              バリデーション機能を実装したら記述します。
-            </div>
-          </div>
-        </div>
-        <div class="form__group">
-          <div class="form__group-title">
-            <span class="form__label--item">電話番号</span>
-            <span class="form__label--required">必須</span>
-          </div>
-          <div class="form__group-content">
-            <div class="form__input--text">
-              <input type="tel" name="tel" placeholder="09012345678" />
-            </div>
-            <div class="form__error">
-              バリデーション機能を実装したら記述します。
-            </div>
-          </div>
-        </div>
-        <div class="form__group">
-          <div class="form__group-title">
-            <span class="form__label--item">お問い合わせ内容</span>
-          </div>
-          <div class="form__group-content">
-            <div class="form__input--textarea">
-              <textarea name="content" placeholder="資料をいただきたいです"></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">送信</button>
-        </div>
-      </form>
-    </div> -->
   </main>
 </body>
 </html>
+
+
+
+

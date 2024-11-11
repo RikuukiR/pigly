@@ -1,0 +1,85 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #CDCDCD
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    color: #EC87EF;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'lora', serif;
+    text-decoration: none;
+}
+
+.header__btn {
+    display: flex;
+    gap: 20px;
+}
+
+.set-btn,
+.logout-btn {
+    padding: 10px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    background-color: #F7F7F7;
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.set-btn::before {
+    content: "\f013";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.logout-btn::before {
+    content: '';
+    /* background-image: url('../img/background.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.container {
+    background-color: #F9F9F9;
+}
+
+.middle-header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    /* 横方向の中央配置 */
+    align-items: center;
+    /* 縦方向の中央配置 */
+    width: 100%;
+    /* 幅を100%にして親要素に合わせる */
+    max-width: 1200px;
+    /* 最大幅を指定 */
+    height: 150px;
+    /* 高さを指定 */
+    border-radius: 10px;
+    /* 角を丸く */
+    padding: 30px;
+    /* 内側の余白 */
+    box-sizing: border-box;
+    /* paddingを含めたボックスサイズにする */
+    margin: 0 auto;
+    /* 親要素内で中央に配置 */
+}

@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 */
 
 // Weight Log Routes
-Route::get('/weight_logs', [Weight_logController::class, 'index']);
+Route::post('/weight_logs', [Weight_logController::class, 'index'])->name('weight_logs.home');
 
 Route::get('/weight_logs/create', [Weight_logController::class, 'create'])->name('weight_logs.create');
 Route::post('/weight_logs/create', [Weight_logController::class, 'store'])->name('weight_logs.store');
