@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/step2.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
@@ -25,9 +25,9 @@
                     <div class="input-with-unit">
                         <input type="number" id="current_weight" name="current_weight" placeholder="現在の体重を入力" required>
                         <span class="unit">kg</span>
-                    @error('name')
-                        <span class="error-message" style="color: red;">{{ $message }}</span>
-                    @enderror
+                        @error('current_weight')
+                            <p style="color: red;">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-group">
@@ -35,27 +35,24 @@
                     <div class="input-with-unit">
                         <input type="number" id="target_weight" name="target_weight" placeholder="目標の体重を入力" required>
                         <span class="unit">kg</span>
-                    @error('name')
-                        <span class="error-message" style="color: red;">{{ $message }}</span>
-                    @enderror
+                        @error('target_weight')
+                            <p style="color: red;">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
-                        @foreach ($errors->all() as $error)
-                            <li style="color: red;">{{ $error }}</li>
-                        @endforeach
+                            @foreach ($errors->all() as $error)
+                                <li style="color: red;">{{ $error }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 @endif
-                </form>
+
                 <div class="form-button">
-                    <form action="{{ route('weight_logs.home') }}" method="POST">
-                    @csrf
-                        <button type="submit" class="form-button__create">アカウントの作成</button>
-                    </form>
+                    <button type="submit" class="form-button__create">アカウントの作成</button>
                 </div>
             </form>
         </div>

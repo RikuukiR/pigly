@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Requests\Step1Request;
+use App\Http\Requests\Step2Request;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +14,7 @@ class UserController extends Controller
         return view('user.step1');
     }
 
-    public function store(Step1Request $request)
+    public function storeStep1(Step1Request $request)
     {
         $validatedData = $request->validated();
         
@@ -30,6 +31,11 @@ class UserController extends Controller
     public function step2()
     {
         return view('user.step2');
+    }
+
+    public function storeStep2(Step2Request $request)
+    {
+        // バリデーション通過後の処理
     }
 
     public function login()

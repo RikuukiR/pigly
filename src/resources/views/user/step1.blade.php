@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/step1.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
@@ -51,12 +51,9 @@
                         </ul>
                     </div>
                 @endif
-                </form>
+                
                 <div class="form-button">
-                    <form action="/register/step2" method="POST">
-                    @csrf
-                        <button type="submit" class="form-button__create">次に進む</button>
-                    </form>
+                    <button type="submit" class="form-button__create">次に進む</button>
                     <a class="form-button__login" href="/login">ログインはこちら</a>
                 </div>
             </form>

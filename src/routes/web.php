@@ -33,6 +33,7 @@ Route::post('/weight_logs/goal_setting', [Weight_targetController::class, 'index
 // User Registration Routes
 Route::get('/register/step1', [UserController::class, 'step1']);
 Route::post('/register/step1', [UserController::class, 'store'])->name('registration.store');
+Route::get('/register/step2', [UserController::class, 'step2'])->name('initialWeight');
 Route::post('/register/step2', [UserController::class, 'step2'])->name('initialWeight');
 
 // Login Routes

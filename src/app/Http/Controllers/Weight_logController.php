@@ -17,6 +17,11 @@ class Weight_logController extends Controller
         return view('weight_logs.create');
     }
 
+    public function store()
+    {
+        return view('weight_logs.create');
+    }
+
     public function search()
     {
         return view('weight_logs.search');

@@ -45,7 +45,7 @@
                 @endif
                 </form>
                 <div class="form-button">
-                    <form action="{{ route('weight_logs.store') }}" method="POST">
+                    <form action="{{ route('weight_logs.home') }}" method="POST">
                     @csrf
                         <button type="submit" class="form-button__login">ログイン</button>
                     </form>

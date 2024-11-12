@@ -25,7 +25,7 @@ class Step1Request extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'email' => 'required|email|regex:/^[\w\.-]+@[\w\.-]+\.\w+$/|unique:users,email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6',
         ];
     }
