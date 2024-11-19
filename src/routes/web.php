@@ -16,6 +16,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
+// Weight Target Routes
+Route::get('/weight_logs/goal_setting', [Weight_targetController::class, 'index'])->name('weight_logs.goal_setting');
+Route::post('/weight_logs/goal_setting', [Weight_targetController::class, 'index'])->name('weight_logs.goal_setting');
+
 // Weight Log Routes
 Route::post('/weight_logs', [Weight_logController::class, 'index'])->name('weight_logs.home');
 
@@ -23,12 +27,8 @@ Route::get('/weight_logs/create', [Weight_logController::class, 'create'])->name
 Route::post('/weight_logs/create', [Weight_logController::class, 'store'])->name('weight_logs.store');
 Route::get('/weight_logs/search', [Weight_logController::class, 'search']);
 Route::get('/weight_logs/{weightLogId}', [Weight_logController::class, 'show']);
-Route::patch('/weight_logs/{weightLogId}/update', [Weight_logController::class, 'edit']);
+Route::patch('/weight_logs/{weightLogId}/update', [Weight_logController::class, 'edit'])->name('weight_logs.update');
 Route::delete('/weight_logs/{weightLogId}/delete', [Weight_logController::class, 'destroy']);
-
-// Weight Target Routes
-Route::get('/weight_logs/goal_setting', [Weight_targetController::class, 'index']);
-Route::post('/weight_logs/goal_setting', [Weight_targetController::class, 'index']);
 
 // User Registration Routes
 Route::get('/register/step1', [UserController::class, 'step1']);

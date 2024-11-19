@@ -22,7 +22,7 @@
         </div>
         <div class="header__btn">
           <div class="header__btn-set">
-            <a href="/weight_logs/goal_setting" class="set-btn">目標体重設定</a>
+            <a href="{{ route('weight_logs.goal_setting') }}" class="set-btn">目標体重設定</a>
           </div>
           <div class="header__btn-logout">
             <a href="/login" class="logout-btn">ログアウト</a>
@@ -40,8 +40,13 @@
 
         <div class="container__log">
           <button class="main__btn-add" type="submit">データを追加</button>
-
-          <button class="main__btn-update" type="submit">✏️</button>
+          @foreach ($weightLogs as $weightLog)
+          <form action="{{ route('weight_logs.update', ['weightLogId' => $weightLog->id]) }}" method="POST">
+            @csrf
+            @method('PATCH')
+            <button class="main__btn-edit" type="submit">✏️</button>
+          </form>
+          @endforeach
         </div>
       </div>
   </main>

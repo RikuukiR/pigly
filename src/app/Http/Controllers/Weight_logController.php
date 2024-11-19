@@ -9,7 +9,8 @@ class Weight_logController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $weightLogs = Weight_Log::all();
+        return view('home', ['weightLogs' => $weightLogs]);
     }
 
     public function create()
@@ -32,9 +33,13 @@ class Weight_logController extends Controller
         return view('weight_logs.show');
     }
 
-    public function edit()
+    public function edit(Request $request, $weightLogId)
     {
-        return view('weight_logs.edit');
+        $weightLog = WeightLog::findOrFail($weightLogId);
+    
+    // ここに編集ロジックを追加
+
+        return redirect()->route('some.route')->with('success', '更新が完了しました');
     }
 
     public function destroy()
