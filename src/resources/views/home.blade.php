@@ -22,12 +22,10 @@
         </div>
         <div class="header__btn">
           <div class="header__btn-set">
-            <button class="set-btn" type="submit">目標体重設定</button>
+            <a href="/weight_logs/goal_setting" class="set-btn">目標体重設定</a>
           </div>
           <div class="header__btn-logout">
-            <button class="logout-btn" type="submit">
-              <span class="logout-icon"></span>ログアウト
-            </button>
+            <a href="/login" class="logout-btn">ログアウト</a>
           </div>
         </div>
     </header>

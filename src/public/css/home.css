@@ -1,4 +1,4 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .header {
     display: flex;
@@ -30,7 +30,7 @@
 .set-btn,
 .logout-btn {
     padding: 10px;
-    width: 150px;
+    width: 160px;
     font-size: 15px;
     font-weight: 300;
     font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
@@ -40,6 +40,7 @@
     background-color: #F7F7F7;
     border: 1px solid #CDCDCD;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .set-btn::before {
@@ -65,21 +66,12 @@
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
-    /* 横方向の中央配置 */
     align-items: center;
-    /* 縦方向の中央配置 */
     width: 100%;
-    /* 幅を100%にして親要素に合わせる */
     max-width: 1200px;
-    /* 最大幅を指定 */
     height: 150px;
-    /* 高さを指定 */
     border-radius: 10px;
-    /* 角を丸く */
     padding: 30px;
-    /* 内側の余白 */
     box-sizing: border-box;
-    /* paddingを含めたボックスサイズにする */
     margin: 0 auto;
-    /* 親要素内で中央に配置 */
 }
