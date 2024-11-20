@@ -65,6 +65,8 @@ laravel環境構築
 
 ## ER図
 
+<img src="/src/public/img/スクリーンショット 2024-11-20 13.53.56.png>
+
 ## URL
 
 ・開発環境：http://localhost/

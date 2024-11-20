@@ -34,8 +34,7 @@ Route::delete('/weight_logs/{weightLogId}/delete', [Weight_logController::class,
 Route::get('/register/step1', [UserController::class, 'step1']);
 Route::post('/register/step1', [UserController::class, 'store'])->name('registration.store');
 Route::get('/register/step2', [UserController::class, 'step2'])->name('initialWeight');
-Route::post('/register/step2', [UserController::class, 'step2'])->name('initialWeight');
-
+Route::post('/register/step2', [UserController::class, 'storeStep2'])->name('registration.storeStep2');
 // Login Routes
 Route::get('/login', [UserController::class, 'login']);
 Route::post('/login', [UserController::class, 'login']);

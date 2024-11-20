@@ -15,18 +15,17 @@ class UserController extends Controller
     }
 
     public function storeStep1(Step1Request $request)
-    {
-        $validatedData = $request->validated();
-        
-        // ユーザーをデータベースに保存する
-        User::create([
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'password' => bcrypt($validatedData['password']),
-        ]);
+{
+    $validatedData = $request->validated();
+    
+    User::create([
+        'name' => $validatedData['name'],
+        'email' => $validatedData['email'],
+        'password' => bcrypt($validatedData['password']),
+    ]);
 
-        return redirect()->route('initialWeight');
-    }
+    return redirect()->route('initialWeight');
+}
 
     public function step2()
     {

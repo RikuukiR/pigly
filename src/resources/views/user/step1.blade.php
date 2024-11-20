@@ -20,6 +20,17 @@
             <div class="step">STEP1 アカウント情報の登録</div>
             <form class="form" action="{{ route('registration.store') }}" method="POST">
                 @csrf
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                        @foreach ($errors->all() as $error)
+                            <li style="color: red;">{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                    </div>
+                @endif
+                
                 <div class="form-group">
                     <label for="name">お名前</label>
                     <input type="text" id="name" name="name" placeholder="名前を入力" required value="{{ old('name') }}">
@@ -41,16 +52,6 @@
                         <span class="error-message" style="color: red;">{{ $message }}</span>
                     @enderror
                 </div>
-                
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                        @foreach ($errors->all() as $error)
-                            <li style="color: red;">{{ $error }}</li>
-                        @endforeach
-                        </ul>
-                    </div>
-                @endif
                 
                 <div class="form-button">
                     <button type="submit" class="form-button__create">次に進む</button>
